@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  hello:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+      - run: echo "Hello from a project created by Terraform"
+
+workflows:
+  main:
+    jobs:
+      - hello
